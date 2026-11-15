@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "event_elder_greeting_001",
+  "kind": "dialogue",
+  "trigger": {
+    "map_id": "map_start_village",
+    "entity_id": "npc_village_elder_001"
+  },
+  "repeatable": true,
+  "lines": [
+    {
+      "speaker_id": "npc_village_elder_001",
+      "text": "旅人，你來得正好。"
+    },
+    {
+      "speaker_id": "npc_village_elder_001",
+      "text": "森林邊緣最近不太平靜。"
+    },
+    {
+      "speaker_id": "player",
+      "text": "發生什麼事了？"
+    }
+  ],
+  "choices": [
+    {
+      "id": "accept",
+      "text": "我願意幫忙",
+      "effects": [
+        {
+          "type": "set_flag",
+          "flag": "flag_met_elder",
+          "value": true
+        }
+      ]
+    }
+  ]
+}

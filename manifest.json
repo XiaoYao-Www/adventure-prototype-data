@@ -1,0 +1,45 @@
+{
+  "manifest_schema": 1,
+  "content_id": "base_world",
+  "content_version": "0.1.0",
+  "schema_version": 1,
+  "min_game_version": "0.1.0",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "characters/npcs/npc_village_elder_001.json",
+      "sha256": "c5c5ebf8ef57b733f981b2881fa6a8cf77ddcc38a07e35c83093335443a5e773",
+      "size": 261
+    },
+    {
+      "path": "events/event_chest_herb_001.json",
+      "sha256": "c0d1e634a525f6a39769ac648207161968dcd66f19c731c9290fa409f86b7809",
+      "size": 730
+    },
+    {
+      "path": "events/event_elder_greeting_001.json",
+      "sha256": "68d03dd6f89a340da5f5b4440d8c0036c0822ece157412f58faff77f983ed714",
+      "size": 734
+    },
+    {
+      "path": "items/item_herb_001.json",
+      "sha256": "e0ff943c148631afb9b16c2461cb539bf64c1ba14051438af1ce438284d7eda5",
+      "size": 204
+    },
+    {
+      "path": "world/maps/forest_edge.json",
+      "sha256": "cbd747ae653dc5ae3fd7317bd293f6ad62364ce0050e9edd486d7058e75f9493",
+      "size": 1197
+    },
+    {
+      "path": "world/maps/starting_village.json",
+      "sha256": "3e911124e1fd733859bd0fe96e518929fa1f74886dc5711559f5fe79c8ad46b8",
+      "size": 1237
+    },
+    {
+      "path": "world/regions/starting_region_001.json",
+      "sha256": "b2178e6d40507ba7d1cd20a2afaaf737e040d57f6ac09bb8bb097b30d8489eff",
+      "size": 162
+    }
+  ]
+}

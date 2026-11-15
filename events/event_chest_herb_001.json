@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "event_chest_herb_001",
+  "kind": "dialogue",
+  "trigger": {
+    "map_id": "map_forest_edge",
+    "entity_id": "chest_forest_herb_001"
+  },
+  "repeatable": false,
+  "lines": [
+    {
+      "speaker_id": "player",
+      "text": "舊木箱，沒有鎖。"
+    },
+    {
+      "speaker_id": "player",
+      "text": "裡面有一株藥草。"
+    }
+  ],
+  "choices": [
+    {
+      "id": "take_herb",
+      "text": "拿走藥草",
+      "effects": [
+        {
+          "type": "give_item",
+          "item_id": "item_herb_001",
+          "qty": 1
+        },
+        {
+          "type": "set_flag",
+          "flag": "flag_chest_forest_herb_opened",
+          "value": true
+        }
+      ]
+    }
+  ]
+}

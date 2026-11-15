@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "map_forest_edge",
+  "name": "森林邊緣（暫定）",
+  "size": {
+    "width": 10,
+    "height": 8
+  },
+  "tile_size": 16,
+  "tiles": [
+    "##########",
+    "#........#",
+    "#..t.....#",
+    "#........#",
+    "#...~~...#",
+    "#....p...#",
+    "#...p....#",
+    "##########"
+  ],
+  "legend": {
+    "#": {
+      "tile": "wall",
+      "walkable": false
+    },
+    ".": {
+      "tile": "grass",
+      "walkable": true
+    },
+    "~": {
+      "tile": "water",
+      "walkable": false
+    },
+    "p": {
+      "tile": "path",
+      "walkable": true
+    },
+    "t": {
+      "tile": "tree",
+      "walkable": false
+    }
+  },
+  "spawn": {
+    "grid": [
+      1,
+      6
+    ]
+  },
+  "entities": [
+    {
+      "id": "chest_forest_herb_001",
+      "type": "object",
+      "grid": [
+        2,
+        2
+      ],
+      "display_key": "chest",
+      "interaction": {
+        "kind": "event",
+        "event_id": "event_chest_herb_001"
+      }
+    }
+  ],
+  "portals": [
+    {
+      "id": "portal_forest_to_village",
+      "grid": [
+        7,
+        6
+      ],
+      "target_map_id": "map_start_village",
+      "target_grid": [
+        8,
+        6
+      ]
+    }
+  ]
+}

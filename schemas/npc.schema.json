@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:game-content:schema:npc:1",
+  "title": "game-content npc v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "name",
+    "role",
+    "short_description",
+    "is_adult",
+    "speech_style"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^npc_[a-z0-9_]{2,63}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40
+    },
+    "role": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40
+    },
+    "short_description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "is_adult": {
+      "type": "boolean"
+    },
+    "speech_style": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    }
+  }
+}

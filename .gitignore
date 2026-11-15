@@ -1,0 +1,27 @@
+# 作業系統與編輯器暫存
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# 本地暫存與備份
+.tmp/
+tmp/
+*.tmp
+*.bak
+*.orig
+*.rej
+*.log
+
+# 建置與打包產出（由發布流程產生，不進版本控制）
+dist/
+build/
+*.zip
+*.tar.gz
+*.tgz
+
+# 注意：不要忽略 *.json。內容資料與 manifest 必須納入版本控制。

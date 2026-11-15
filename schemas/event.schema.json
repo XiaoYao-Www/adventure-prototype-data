@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:game-content:schema:event:1",
+  "title": "game-content event v1",
+  "description": "對話事件。effects 只允許 set_flag 與 give_item；未知型別必須被 client 拒絕。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "kind",
+    "trigger",
+    "repeatable",
+    "lines"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^event_[a-z0-9_]{2,63}$"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "dialogue"
+      ]
+    },
+    "trigger": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "map_id",
+        "entity_id"
+      ],
+      "properties": {
+        "map_id": {
+          "type": "string",
+          "pattern": "^map_[a-z0-9_]{2,63}$"
+        },
+        "entity_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]{2,63}$"
+        }
+      }
+    },
+    "repeatable": {
+      "type": "boolean"
+    },
+    "lines": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 6,
+      "items": {
+        "$ref": "#/$defs/line"
+      }
+    },
+    "choices": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 4,
+      "items": {
+        "$ref": "#/$defs/choice"
+      }
+    }
+  },
+  "$defs": {
+    "line": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "speaker_id",
+        "text"
+      ],
+      "properties": {
+        "speaker_id": {
+          "type": "string",
+          "pattern": "^(player|npc_[a-z0-9_]{2,63})$"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        }
+      }
+    },
+    "choice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "text",
+        "effects"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]{1,31}$"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "effects": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 4,
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/$defs/set_flag"
+              },
+              {
+                "$ref": "#/$defs/give_item"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "set_flag": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "flag",
+        "value"
+      ],
+      "properties": {
+        "type": {
+          "const": "set_flag"
+        },
+        "flag": {
+          "type": "string",
+          "pattern": "^flag_[a-z0-9_]{2,63}$"
+        },
+        "value": {
+          "type": "boolean"
+        }
+      }
+    },
+    "give_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "item_id",
+        "qty"
+      ],
+      "properties": {
+        "type": {
+          "const": "give_item"
+        },
+        "item_id": {
+          "type": "string",
+          "pattern": "^item_[a-z0-9_]{2,63}$"
+        },
+        "qty": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 99
+        }
+      }
+    }
+  }
+}

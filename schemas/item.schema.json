@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:game-content:schema:item:1",
+  "title": "game-content item v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "name",
+    "category",
+    "description",
+    "stack_limit"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^item_[a-z0-9_]{2,63}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "consumable",
+        "material",
+        "key"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "stack_limit": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9999
+    }
+  }
+}

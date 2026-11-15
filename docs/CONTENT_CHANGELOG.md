@@ -1,0 +1,35 @@
+# 內容包變更紀錄
+
+格式參考 Keep a Changelog；日期為 Asia/Taipei。內容版本遵循 SemVer（規則見 `docs/CONTENT_SCHEMA.md` 第 12 節）。
+
+## [0.1.0] - 2026-11-16
+
+### 新增
+
+- 內容包骨架：`manifest.json`（`manifest_schema` 1、`content_id` `base_world`、`content_version` `0.1.0`、`schema_version` 1、`min_game_version` `0.1.0`、`dependencies` `[]`），`files` 依 path 排序並含真實 sha256／size。
+- JSON Schema v1：`manifest`、`region`、`map`、`npc`、`item`、`event`。
+- 文件：`docs/CONTENT_SCHEMA.md`、`docs/ASSET_POLICY.md`、根目錄 `README.md`、`AGENTS.md`、`.gitignore`。
+- 地區：`region_starting_001`（含兩張地圖）。
+- 地圖：`map_start_village`（12×9）、`map_forest_edge`（10×8）；雙向 portal。
+- 角色：`npc_village_elder_001`（村長）。
+- 道具：`item_herb_001`（藥草）。
+- 事件：`event_elder_greeting_001`（1 個選項 → `set_flag` `flag_met_elder`）、`event_chest_herb_001`（1 個選項 → `give_item` + `set_flag` `flag_chest_forest_herb_opened`）。
+- 佔位目錄說明：`asset_catalog/`、`optional_content/adult/`、`releases/`。
+
+### 說明
+
+- 全部世界觀、地名、角色與對話皆為**暫定**，不是正史。
+- 本輪無任何第三方素材；`display_key` 由 client 以程式內 placeholder 呈現。
+- 成人內容模組為空、預設不啟用。
+- 效果白名單只有 `set_flag` 與 `give_item`。
+
+### 驗證
+
+- 以 node v24 內建模組執行 JSON 解析、schema 比對、引用完整性、ID 唯一性、tiles 幾何、manifest 雜湊與檔案格式檢查（清單見 `docs/CONTENT_SCHEMA.md` 第 13 節）；結果記於當次交接報告。
+- **未檢查**：Godot client 實際載入與遊戲內互動（由 `game-client` 端整合測試）；Android 實機測試；素材授權（本輪無素材）。
+
+### 已知限制
+
+- 無戰鬥、任務、商店、敵人、技能、存檔格式、旗標定義檔。
+- `repeatable: false` 的只觸發一次需 client 依旗標判斷。
+- 地圖與事件僅足夠驗證載入與基本互動，不足以構成完整遊戲循環。

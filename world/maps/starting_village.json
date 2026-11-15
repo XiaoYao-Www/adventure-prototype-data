@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "id": "map_start_village",
+  "name": "起始村落（暫定）",
+  "size": {
+    "width": 12,
+    "height": 9
+  },
+  "tile_size": 16,
+  "tiles": [
+    "############",
+    "#..t...t...#",
+    "#...~~.....#",
+    "#...~~.....#",
+    "#.....p....#",
+    "#.....p....#",
+    "#..p..p.p..#",
+    "#.......p..#",
+    "############"
+  ],
+  "legend": {
+    "#": {
+      "tile": "wall",
+      "walkable": false
+    },
+    ".": {
+      "tile": "grass",
+      "walkable": true
+    },
+    "~": {
+      "tile": "water",
+      "walkable": false
+    },
+    "p": {
+      "tile": "path",
+      "walkable": true
+    },
+    "t": {
+      "tile": "tree",
+      "walkable": false
+    }
+  },
+  "spawn": {
+    "grid": [
+      3,
+      6
+    ]
+  },
+  "entities": [
+    {
+      "id": "npc_village_elder_001",
+      "type": "npc",
+      "grid": [
+        5,
+        5
+      ],
+      "display_key": "npc_elder",
+      "interaction": {
+        "kind": "event",
+        "event_id": "event_elder_greeting_001"
+      }
+    }
+  ],
+  "portals": [
+    {
+      "id": "portal_start_to_forest",
+      "grid": [
+        10,
+        7
+      ],
+      "target_map_id": "map_forest_edge",
+      "target_grid": [
+        8,
+        6
+      ]
+    }
+  ]
+}
