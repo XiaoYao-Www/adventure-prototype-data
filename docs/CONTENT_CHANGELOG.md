@@ -2,6 +2,17 @@
 
 格式參考 Keep a Changelog；日期為 Asia/Taipei。內容版本遵循 SemVer（規則見 `docs/CONTENT_SCHEMA.md` 第 12 節）。
 
+## [0.1.1] - 2026-11-16
+
+### 變更
+
+- 村長對話新增一句提示（森林邊緣路況），用於驗證內容自動更新流程。
+- `manifest.json` `content_version` 0.1.0 → 0.1.1（schema_version 仍為 1，相容 min_game_version 0.1.0）。
+
+### 驗證
+
+- 內容包驗證器通過（雜湊、引用、manifest）。
+
 ## [Unreleased]
 
 ### 素材目錄

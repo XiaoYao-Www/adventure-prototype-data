@@ -19,6 +19,10 @@
     {
       "speaker_id": "player",
       "text": "發生什麼事了？"
+    },
+    {
+      "speaker_id": "npc_village_elder_001",
+      "text": "路上小心，森林邊緣的路不好走。"
     }
   ],
   "choices": [

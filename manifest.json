@@ -1,7 +1,7 @@
 {
   "manifest_schema": 1,
   "content_id": "base_world",
-  "content_version": "0.1.0",
+  "content_version": "0.1.1",
   "schema_version": 1,
   "min_game_version": "0.1.0",
   "dependencies": [],
@@ -18,8 +18,8 @@
     },
     {
       "path": "events/event_elder_greeting_001.json",
-      "sha256": "68d03dd6f89a340da5f5b4440d8c0036c0822ece157412f58faff77f983ed714",
-      "size": 734
+      "sha256": "9ada10bf2e5ded69de74846c8b49e829517be8c8850e044de54c1ffc7e476bca",
+      "size": 854
     },
     {
       "path": "items/item_herb_001.json",
