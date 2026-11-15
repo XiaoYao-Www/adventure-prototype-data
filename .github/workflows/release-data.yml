@@ -1,0 +1,51 @@
+name: release-data
+
+# 推送 data-v* tag 即自動建立內容 release：
+# - content bundle ZIP（manifest + 資料 JSON）
+# - update/latest_data.json（App 啟動時用來檢查內容更新）
+# 內容 repo 不放執行邏輯；bundle 產生器由 client repo 取得（CI 專用）。
+on:
+  push:
+    tags:
+      - "data-v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout content
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Fetch bundle builder from client repo
+        run: |
+          curl -fsSL \
+            "https://raw.githubusercontent.com/XiaoYao-Www/adventure-prototype-client/main/tools/make_content_bundle.mjs" \
+            -o /tmp/make_content_bundle.mjs
+
+      - name: Build content bundle + latest_data.json
+        run: node /tmp/make_content_bundle.mjs --content . --tag "${GITHUB_REF_NAME}"
+
+      - name: Verify bundle
+        run: |
+          ls -la releases/*.zip
+          node -e "JSON.parse(require('fs').readFileSync('update/latest_data.json','utf8')); console.log('latest_data.json OK')"
+
+      - name: Create release and upload assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" \
+            --title "Content ${GITHUB_REF_NAME}" \
+            --notes-file releases/RELEASE_NOTES.md \
+            --latest \
+            releases/*.zip \
+            update/latest_data.json
+          gh release view "${GITHUB_REF_NAME}" --json assets --jq '.assets[].name'

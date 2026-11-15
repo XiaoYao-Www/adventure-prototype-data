@@ -25,3 +25,7 @@ build/
 *.tgz
 
 # 注意：不要忽略 *.json。內容資料與 manifest 必須納入版本控制。
+
+# 內容 release 產生檔（由 GitHub Actions 產生）
+update/
+releases/RELEASE_NOTES.md
