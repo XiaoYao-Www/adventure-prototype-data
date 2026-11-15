@@ -1,0 +1,23 @@
+{
+  "id": "items16",
+  "title": "Items pack (x16) / Items16",
+  "authors": [
+    "Glionox"
+  ],
+  "source_url": "https://glionox.itch.io/items16",
+  "license": "custom (per itch.io page)",
+  "license_url": "https://glionox.itch.io/items16",
+  "license_status": "verified",
+  "commercial_use": true,
+  "modification": true,
+  "redistribution": false,
+  "attribution_required": false,
+  "credit_appreciated": true,
+  "verified_at": "2026-11-16",
+  "verified_from": "itch.io 頁面 Licence 段：Use as you want in free and commercial projects; Modify; Credits appreciated; You may not redistribute or resell this pack",
+  "notes": "可嵌入遊戲使用與修改，但**不得再散布或轉售原始素材包**。因此原始圖示不進公開 APK；若日後要公開，需確認內嵌方式或替換素材。",
+  "usage_policy": "restricted_redistribution",
+  "file_count": 1244,
+  "bytes": 436431,
+  "catalog_generated_at": "2026-11-15T17:56:22.955Z"
+}

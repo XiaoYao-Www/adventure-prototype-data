@@ -2,6 +2,15 @@
 
 格式參考 Keep a Changelog；日期為 Asia/Taipei。內容版本遵循 SemVer（規則見 `docs/CONTENT_SCHEMA.md` 第 12 節）。
 
+## [Unreleased]
+
+### 素材目錄
+
+- 建立 `asset_catalog/`：Mini World Sprites（CC0-1.0）與 Items16（自訂授權、禁止再散布）的
+  分類、雜湊、授權摘要與使用政策；1451 張 16x16 PNG。
+- 原始素材不進倉庫；工作區 `assets/` 為來源，索引由 `game-client/tools/build_asset_catalog.mjs` 產生。
+- **未變更**內容包 `manifest.json` 與 `content_version`（素材尚未接入遊戲）。
+
 ## [0.1.0] - 2026-11-16
 
 ### 新增

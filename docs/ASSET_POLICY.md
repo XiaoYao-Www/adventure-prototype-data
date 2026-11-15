@@ -62,3 +62,15 @@
 - 本版 manifest `files` 只列 JSON 資料；未來若納入資產，需先修改契約（`schema_version` 提升），並在 manifest 中明確標示資產類型、大小與雜湊。
 - 素材變更不得讓已發布 ID 改變語意；替換素材需保持 client 端索引穩定或提供遷移。
 - 發布內容包前必須再次確認所有資產授權仍有效（授權可能隨時間或作者政策改變）。
+
+## 7. 已核對的素材包（2026-11-16）
+
+| pack | 授權 | 商用 | 修改 | 再散布 | 審核狀態 | 依據 |
+| --- | --- | --- | --- | --- | --- | --- |
+| `mini_world_sprites` | CC0-1.0 | 可 | 可 | 可 | approved | itch.io 頁面 Asset license 欄位＋Information 段 |
+| `items16` | 自訂（Glionox） | 可 | 可 | **不可** | approved_with_restriction | itch.io 頁面 Licence 段 |
+
+- 原始檔案不進本倉庫；索引與授權摘要見 `asset_catalog/`。
+- `items16` 的 `redistributable=false`：不得把原始 item 圖示放進公開 APK／公開內容包；
+  僅限本地與內部測試使用。違反此限制會使內容包不可發布。
+- 若作者政策日後改變，以最新來源頁面為準並更新本表與 `asset_catalog/packs/`。
