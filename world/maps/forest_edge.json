@@ -13,8 +13,8 @@
     "#..t.....#",
     "#........#",
     "#...~~...#",
-    "#....p...#",
-    "#...p....#",
+    "#........#",
+    "#.....p..#",
     "##########"
   ],
   "legend": {
@@ -30,13 +30,13 @@
       "tile": "water",
       "walkable": false
     },
-    "p": {
-      "tile": "path",
-      "walkable": true
-    },
     "t": {
       "tile": "tree",
       "walkable": false
+    },
+    "p": {
+      "tile": "path",
+      "walkable": true
     }
   },
   "spawn": {
@@ -58,6 +58,19 @@
         "kind": "event",
         "event_id": "event_chest_herb_001"
       }
+    },
+    {
+      "id": "npc_forest_hunter_001",
+      "type": "npc",
+      "grid": [
+        6,
+        3
+      ],
+      "display_key": "npc_hunter",
+      "interaction": {
+        "kind": "event",
+        "event_id": "event_hunter_greeting_001"
+      }
     }
   ],
   "portals": [
@@ -70,6 +83,18 @@
       "target_map_id": "map_start_village",
       "target_grid": [
         8,
+        6
+      ]
+    },
+    {
+      "id": "portal_forest_to_depths",
+      "grid": [
+        8,
+        1
+      ],
+      "target_map_id": "map_forest_depths",
+      "target_grid": [
+        1,
         6
       ]
     }

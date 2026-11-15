@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "event_guard_greeting_001",
+  "kind": "dialogue",
+  "trigger": {
+    "map_id": "map_village_square",
+    "entity_id": "npc_square_guard_001"
+  },
+  "repeatable": true,
+  "lines": [
+    {
+      "speaker_id": "npc_square_guard_001",
+      "text": "廣場很安全，放心逛吧。"
+    },
+    {
+      "speaker_id": "npc_square_guard_001",
+      "text": "森林那頭就不一定了。"
+    }
+  ],
+  "choices": [
+    {
+      "id": "thanks",
+      "text": "謝謝提醒",
+      "effects": [
+        {
+          "type": "set_flag",
+          "flag": "flag_met_guard",
+          "value": true
+        }
+      ]
+    }
+  ]
+}

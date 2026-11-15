@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "id": "map_start_village",
+  "name": "起始村落（暫定）",
+  "size": {
+    "width": 12,
+    "height": 9
+  },
+  "tile_size": 16,
+  "tiles": [
+    "############",
+    "#.t.....t..#",
+    "#...~~.....#",
+    "#...~~.....#",
+    "#.pp.......#",
+    "#..........#",
+    "#.....ppp..#",
+    "#..........#",
+    "############"
+  ],
+  "legend": {
+    "#": {
+      "tile": "wall",
+      "walkable": false
+    },
+    ".": {
+      "tile": "grass",
+      "walkable": true
+    },
+    "~": {
+      "tile": "water",
+      "walkable": false
+    },
+    "t": {
+      "tile": "tree",
+      "walkable": false
+    },
+    "p": {
+      "tile": "path",
+      "walkable": true
+    }
+  },
+  "spawn": {
+    "grid": [
+      3,
+      6
+    ]
+  },
+  "entities": [
+    {
+      "id": "npc_village_elder_001",
+      "type": "npc",
+      "grid": [
+        5,
+        5
+      ],
+      "display_key": "npc_elder",
+      "interaction": {
+        "kind": "event",
+        "event_id": "event_elder_greeting_001"
+      }
+    },
+    {
+      "id": "npc_village_merchant_001",
+      "type": "npc",
+      "grid": [
+        8,
+        3
+      ],
+      "display_key": "npc_merchant",
+      "interaction": {
+        "kind": "event",
+        "event_id": "event_merchant_greeting_001"
+      }
+    },
+    {
+      "id": "object_village_well_001",
+      "type": "object",
+      "grid": [
+        2,
+        7
+      ],
+      "display_key": "well",
+      "interaction": {
+        "kind": "event",
+        "event_id": "event_well_inspect_001"
+      }
+    },
+    {
+      "id": "object_village_sign_001",
+      "type": "object",
+      "grid": [
+        6,
+        7
+      ],
+      "display_key": "sign",
+      "interaction": {
+        "kind": "event",
+        "event_id": "event_sign_village_001"
+      }
+    }
+  ],
+  "portals": [
+    {
+      "id": "portal_village_to_forest",
+      "grid": [
+        10,
+        7
+      ],
+      "target_map_id": "map_forest_edge",
+      "target_grid": [
+        8,
+        6
+      ]
+    },
+    {
+      "id": "portal_village_to_square",
+      "grid": [
+        9,
+        7
+      ],
+      "target_map_id": "map_village_square",
+      "target_grid": [
+        6,
+        6
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "id": "map_village_square",
+  "name": "村落廣場（暫定）",
+  "size": {
+    "width": 12,
+    "height": 9
+  },
+  "tile_size": 16,
+  "tiles": [
+    "############",
+    "#..........#",
+    "#..t....t..#",
+    "#..........#",
+    "#..........#",
+    "#....pp....#",
+    "#..........#",
+    "#..........#",
+    "############"
+  ],
+  "legend": {
+    "#": {
+      "tile": "wall",
+      "walkable": false
+    },
+    ".": {
+      "tile": "grass",
+      "walkable": true
+    },
+    "~": {
+      "tile": "water",
+      "walkable": false
+    },
+    "t": {
+      "tile": "tree",
+      "walkable": false
+    },
+    "p": {
+      "tile": "path",
+      "walkable": true
+    }
+  },
+  "spawn": {
+    "grid": [
+      6,
+      7
+    ]
+  },
+  "entities": [
+    {
+      "id": "npc_square_guard_001",
+      "type": "npc",
+      "grid": [
+        4,
+        4
+      ],
+      "display_key": "npc_guard",
+      "interaction": {
+        "kind": "event",
+        "event_id": "event_guard_greeting_001"
+      }
+    },
+    {
+      "id": "object_square_market_001",
+      "type": "object",
+      "grid": [
+        8,
+        6
+      ],
+      "display_key": "market",
+      "interaction": {
+        "kind": "event",
+        "event_id": "event_market_inspect_001"
+      }
+    }
+  ],
+  "portals": [
+    {
+      "id": "portal_square_to_village",
+      "grid": [
+        1,
+        4
+      ],
+      "target_map_id": "map_start_village",
+      "target_grid": [
+        7,
+        6
+      ]
+    }
+  ]
+}

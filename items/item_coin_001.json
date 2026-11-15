@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "id": "item_coin_001",
+  "name": "舊硬幣",
+  "category": "material",
+  "description": "刻著模糊圖案的舊硬幣。",
+  "stack_limit": 999
+}

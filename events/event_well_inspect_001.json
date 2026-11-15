@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "event_well_inspect_001",
+  "kind": "dialogue",
+  "trigger": {
+    "map_id": "map_start_village",
+    "entity_id": "object_village_well_001"
+  },
+  "repeatable": true,
+  "lines": [
+    {
+      "speaker_id": "player",
+      "text": "井水很清澈。"
+    },
+    {
+      "speaker_id": "player",
+      "text": "水面映著天空。"
+    }
+  ],
+  "choices": [
+    {
+      "id": "look",
+      "text": "再看一眼",
+      "effects": [
+        {
+          "type": "set_flag",
+          "flag": "flag_looked_well",
+          "value": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "event_hunter_greeting_001",
+  "kind": "dialogue",
+  "trigger": {
+    "map_id": "map_forest_edge",
+    "entity_id": "npc_forest_hunter_001"
+  },
+  "repeatable": true,
+  "lines": [
+    {
+      "speaker_id": "npc_forest_hunter_001",
+      "text": "腳步放輕，這裡有野獸。"
+    },
+    {
+      "speaker_id": "npc_forest_hunter_001",
+      "text": "深處的神社別亂碰。"
+    }
+  ],
+  "choices": [
+    {
+      "id": "ask",
+      "text": "神社有什麼問題？",
+      "effects": [
+        {
+          "type": "set_flag",
+          "flag": "flag_asked_hunter",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "leave",
+      "text": "我知道了",
+      "effects": [
+        {
+          "type": "set_flag",
+          "flag": "flag_met_hunter",
+          "value": true
+        }
+      ]
+    }
+  ]
+}

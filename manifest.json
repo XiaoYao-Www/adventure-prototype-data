@@ -1,15 +1,40 @@
 {
   "manifest_schema": 1,
   "content_id": "base_world",
-  "content_version": "0.1.1",
+  "content_version": "0.2.0",
   "schema_version": 1,
   "min_game_version": "0.1.0",
   "dependencies": [],
   "files": [
     {
+      "path": "characters/npcs/npc_forest_hermit_001.json",
+      "sha256": "07de8fd8ddf9ab5bcbf8762f8e1e12f12af78c787d521bdcd4dc68cdd5bbccd6",
+      "size": 252
+    },
+    {
+      "path": "characters/npcs/npc_forest_hunter_001.json",
+      "sha256": "68d33aa43e3a68c1f354b44630270bedb02dc09d6be78a35f605d63a25c8e2c7",
+      "size": 249
+    },
+    {
+      "path": "characters/npcs/npc_lake_fisher_001.json",
+      "sha256": "92f7389b077a303b9a83cf7eeb804fe6252ce7d657241b45983f1edea5bf059a",
+      "size": 250
+    },
+    {
+      "path": "characters/npcs/npc_square_guard_001.json",
+      "sha256": "1b52ef787a891f39d466cb8a3af85ba7fea2da1c9129dbf5949301e76c30d8e7",
+      "size": 233
+    },
+    {
       "path": "characters/npcs/npc_village_elder_001.json",
       "sha256": "c5c5ebf8ef57b733f981b2881fa6a8cf77ddcc38a07e35c83093335443a5e773",
       "size": 261
+    },
+    {
+      "path": "characters/npcs/npc_village_merchant_001.json",
+      "sha256": "03b5920cbbbd99717f0ffbc2fcf6e5354cf0e26b191a1050b42e94825ad14d38",
+      "size": 255
     },
     {
       "path": "events/event_chest_herb_001.json",
@@ -17,29 +42,129 @@
       "size": 730
     },
     {
+      "path": "events/event_depths_chest_001.json",
+      "sha256": "7f8730531a6d18823c5b0ca845051ad2599959195b9a7060da2dce4807c44859",
+      "size": 735
+    },
+    {
       "path": "events/event_elder_greeting_001.json",
-      "sha256": "9ada10bf2e5ded69de74846c8b49e829517be8c8850e044de54c1ffc7e476bca",
-      "size": 854
+      "sha256": "00b4b0c56b5862d6b4eefb44715cfcc260b83e5c10ac5af28a361fcade777013",
+      "size": 1073
+    },
+    {
+      "path": "events/event_fisher_greeting_001.json",
+      "sha256": "1d5e99ba922a4ad852a3f1fb6a0dc39cb3bd036531d164bbae6fcd667714a942",
+      "size": 832
+    },
+    {
+      "path": "events/event_guard_greeting_001.json",
+      "sha256": "edd90761302a5e6bae07ca775314db4a623aa32a1d3732d9f20a5ba5272173fc",
+      "size": 651
+    },
+    {
+      "path": "events/event_hermit_greeting_001.json",
+      "sha256": "a2004c6e2b22feb230305ce92af97a27b857d9b665bbb258aa4557bb4654527b",
+      "size": 981
+    },
+    {
+      "path": "events/event_hunter_greeting_001.json",
+      "sha256": "3fc8b8152157096ed795cf91cec094c369a5a09ffea47daa0ef3cbf3ddc2d6a9",
+      "size": 863
+    },
+    {
+      "path": "events/event_lake_sign_001.json",
+      "sha256": "fedaafa16d436f93f4bbe2d8b4ee3afa4ff24d74ae92ede34e68ca89022cc042",
+      "size": 645
+    },
+    {
+      "path": "events/event_lakeside_chest_001.json",
+      "sha256": "5e3401beda95a6e0ed6747893433e65bc2e098f96ff6008fc1913e3a7d794542",
+      "size": 730
+    },
+    {
+      "path": "events/event_market_inspect_001.json",
+      "sha256": "641f03626c23471bcc73a6f910aa69c857c94afaa9d14fd5e5d462f114cf9330",
+      "size": 761
+    },
+    {
+      "path": "events/event_merchant_greeting_001.json",
+      "sha256": "a75ada0190da89e24c498290046b778d44e58e1a1b4da80c0afd430c4d1d85df",
+      "size": 996
+    },
+    {
+      "path": "events/event_shrine_inspect_001.json",
+      "sha256": "4d7207b4f3ff2175d1e0d49ba39920c3f269d9466860325eb60fdea6fa744396",
+      "size": 652
+    },
+    {
+      "path": "events/event_sign_village_001.json",
+      "sha256": "c315cee49be562e4a4fee3e9bfd9b1a48933c27d15a6b1bcab1772ab67a872ef",
+      "size": 557
+    },
+    {
+      "path": "events/event_well_inspect_001.json",
+      "sha256": "62f8fc6ba4be2d64b4681bf512ed3251326c54b5ca966ce7437fe6ea4a4a045d",
+      "size": 599
+    },
+    {
+      "path": "items/item_berry_001.json",
+      "sha256": "13e1b61cc91665b980893616cb8b9774e1538ad0ad4c936bb9b28530ecc01f0c",
+      "size": 181
+    },
+    {
+      "path": "items/item_coin_001.json",
+      "sha256": "29935a87181dd9b0f71112ed1ae2f050ddf273d6caeb7ee4b1976b2843859dd6",
+      "size": 176
+    },
+    {
+      "path": "items/item_fish_001.json",
+      "sha256": "967aafe6988c8980bcea775dbec12873349b6a2d1cef4fc1b8f2e2cefb2ff7da",
+      "size": 162
     },
     {
       "path": "items/item_herb_001.json",
-      "sha256": "e0ff943c148631afb9b16c2461cb539bf64c1ba14051438af1ce438284d7eda5",
-      "size": 204
+      "sha256": "0ea2af65c4bc89779a2d75046ef47d772baee6b91d33ff76ade809de90c0d130",
+      "size": 171
+    },
+    {
+      "path": "items/item_stone_001.json",
+      "sha256": "617a9ac6af0ffffcb122b3b2a6045cb64654fece9eee5c301c1775fff94fda5d",
+      "size": 176
+    },
+    {
+      "path": "items/item_wood_001.json",
+      "sha256": "cbae3365c8def677043992629ce250ac99939e9a9a0baacfc6db3cdbdcd9a534",
+      "size": 163
+    },
+    {
+      "path": "world/maps/forest_depths.json",
+      "sha256": "8f393375243968175731ea8cb406f45af5d7efce615e3731a18100ffa524b10f",
+      "size": 1936
     },
     {
       "path": "world/maps/forest_edge.json",
-      "sha256": "cbd747ae653dc5ae3fd7317bd293f6ad62364ce0050e9edd486d7058e75f9493",
-      "size": 1197
+      "sha256": "9a8c48b19f5626cd79890a29b334aa03899ed98405245ac7f8a3e02572a73d6a",
+      "size": 1647
     },
     {
-      "path": "world/maps/starting_village.json",
-      "sha256": "3e911124e1fd733859bd0fe96e518929fa1f74886dc5711559f5fe79c8ad46b8",
-      "size": 1237
+      "path": "world/maps/lakeside.json",
+      "sha256": "54207a62fec784ba1a5f374d1ec24b060c0bc422eae4bb2b7a81350688c9fbff",
+      "size": 1723
+    },
+    {
+      "path": "world/maps/start_village.json",
+      "sha256": "020de9ac589f19cb3af56eb7dea332d2f98402efc5d1d6e9938d7820fee53b5f",
+      "size": 2202
+    },
+    {
+      "path": "world/maps/village_square.json",
+      "sha256": "896d5383e72ea15600e3d1e615dd96d8428320ce0356134a8bd1ddfadcd3d06e",
+      "size": 1497
     },
     {
       "path": "world/regions/starting_region_001.json",
-      "sha256": "b2178e6d40507ba7d1cd20a2afaaf737e040d57f6ac09bb8bb097b30d8489eff",
-      "size": 162
+      "sha256": "1555d0dd6c6b87e7eed3d2b8c2d8b08288aa54e8b6fa24a9d409cf66fbef6720",
+      "size": 233
     }
   ]
 }

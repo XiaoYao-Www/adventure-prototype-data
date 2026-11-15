@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "event_hermit_greeting_001",
+  "kind": "dialogue",
+  "trigger": {
+    "map_id": "map_forest_depths",
+    "entity_id": "npc_forest_hermit_001"
+  },
+  "repeatable": true,
+  "lines": [
+    {
+      "speaker_id": "npc_forest_hermit_001",
+      "text": "你走到了不該來的地方。"
+    },
+    {
+      "speaker_id": "npc_forest_hermit_001",
+      "text": "神社記得每一個來訪者。"
+    }
+  ],
+  "choices": [
+    {
+      "id": "offer",
+      "text": "獻上石塊",
+      "effects": [
+        {
+          "type": "give_item",
+          "item_id": "item_stone_001",
+          "qty": 1
+        },
+        {
+          "type": "set_flag",
+          "flag": "flag_offered_stone",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "ask",
+      "text": "這是什麼意思？",
+      "effects": [
+        {
+          "type": "set_flag",
+          "flag": "flag_asked_hermit",
+          "value": true
+        }
+      ]
+    }
+  ]
+}

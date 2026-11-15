@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "npc_square_guard_001",
+  "name": "衛兵（暫定）",
+  "role": "守衛",
+  "short_description": "負責廣場秩序的年輕衛兵。",
+  "is_adult": true,
+  "speech_style": "直率、簡短。"
+}

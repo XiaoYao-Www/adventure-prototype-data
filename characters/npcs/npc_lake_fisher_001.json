@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "npc_lake_fisher_001",
+  "name": "漁夫（暫定）",
+  "role": "漁夫",
+  "short_description": "在湖畔釣魚的漁夫，知道水位變化。",
+  "is_adult": true,
+  "speech_style": "悠閒、愛開玩笑。"
+}

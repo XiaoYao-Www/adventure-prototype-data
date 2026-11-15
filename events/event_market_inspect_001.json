@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "event_market_inspect_001",
+  "kind": "dialogue",
+  "trigger": {
+    "map_id": "map_village_square",
+    "entity_id": "object_square_market_001"
+  },
+  "repeatable": true,
+  "lines": [
+    {
+      "speaker_id": "player",
+      "text": "攤位上擺著木材、石塊和乾糧。"
+    },
+    {
+      "speaker_id": "player",
+      "text": "老闆不在，留了張紙條。"
+    }
+  ],
+  "choices": [
+    {
+      "id": "take",
+      "text": "收下紙條旁的舊硬幣",
+      "effects": [
+        {
+          "type": "give_item",
+          "item_id": "item_coin_001",
+          "qty": 1
+        },
+        {
+          "type": "set_flag",
+          "flag": "flag_took_coin",
+          "value": true
+        }
+      ]
+    }
+  ]
+}

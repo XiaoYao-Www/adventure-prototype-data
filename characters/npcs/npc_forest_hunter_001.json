@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "id": "npc_forest_hunter_001",
+  "name": "獵人（暫定）",
+  "role": "獵人",
+  "short_description": "熟悉森林邊緣的獵人，知道野獸動向。",
+  "is_adult": true,
+  "speech_style": "低沉、謹慎。"
+}

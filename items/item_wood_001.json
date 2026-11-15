@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "id": "item_wood_001",
+  "name": "木材",
+  "category": "material",
+  "description": "乾燥可用的木柴。",
+  "stack_limit": 99
+}

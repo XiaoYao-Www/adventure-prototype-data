@@ -22,17 +22,28 @@
     },
     {
       "speaker_id": "npc_village_elder_001",
-      "text": "路上小心，森林邊緣的路不好走。"
+      "text": "森林深處有座舊神社，去看一眼吧。"
     }
   ],
   "choices": [
     {
       "id": "accept",
-      "text": "我願意幫忙",
+      "text": "我願意去查看",
       "effects": [
         {
           "type": "set_flag",
           "flag": "flag_met_elder",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "ask",
+      "text": "先告訴我村子的事",
+      "effects": [
+        {
+          "type": "set_flag",
+          "flag": "flag_asked_elder",
           "value": true
         }
       ]

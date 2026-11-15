@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "id": "map_forest_depths",
+  "name": "森林深處（暫定）",
+  "size": {
+    "width": 12,
+    "height": 9
+  },
+  "tile_size": 16,
+  "tiles": [
+    "############",
+    "#..........#",
+    "#..t...t...#",
+    "#..........#",
+    "#....~~....#",
+    "#....~~....#",
+    "#.pp.......#",
+    "#..........#",
+    "############"
+  ],
+  "legend": {
+    "#": {
+      "tile": "wall",
+      "walkable": false
+    },
+    ".": {
+      "tile": "grass",
+      "walkable": true
+    },
+    "~": {
+      "tile": "water",
+      "walkable": false
+    },
+    "t": {
+      "tile": "tree",
+      "walkable": false
+    },
+    "p": {
+      "tile": "path",
+      "walkable": true
+    }
+  },
+  "spawn": {
+    "grid": [
+      1,
+      6
+    ]
+  },
+  "entities": [
+    {
+      "id": "npc_forest_hermit_001",
+      "type": "npc",
+      "grid": [
+        8,
+        4
+      ],
+      "display_key": "npc_hermit",
+      "interaction": {
+        "kind": "event",
+        "event_id": "event_hermit_greeting_001"
+      }
+    },
+    {
+      "id": "chest_depths_stone_001",
+      "type": "object",
+      "grid": [
+        9,
+        2
+      ],
+      "display_key": "chest",
+      "interaction": {
+        "kind": "event",
+        "event_id": "event_depths_chest_001"
+      }
+    },
+    {
+      "id": "object_depths_shrine_001",
+      "type": "object",
+      "grid": [
+        3,
+        4
+      ],
+      "display_key": "shrine",
+      "interaction": {
+        "kind": "event",
+        "event_id": "event_shrine_inspect_001"
+      }
+    }
+  ],
+  "portals": [
+    {
+      "id": "portal_depths_to_forest",
+      "grid": [
+        1,
+        1
+      ],
+      "target_map_id": "map_forest_edge",
+      "target_grid": [
+        2,
+        6
+      ]
+    },
+    {
+      "id": "portal_depths_to_lake",
+      "grid": [
+        10,
+        7
+      ],
+      "target_map_id": "map_lakeside",
+      "target_grid": [
+        1,
+        6
+      ]
+    }
+  ]
+}

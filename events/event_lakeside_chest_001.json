@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "event_lakeside_chest_001",
+  "kind": "dialogue",
+  "trigger": {
+    "map_id": "map_lakeside",
+    "entity_id": "chest_lake_fish_001"
+  },
+  "repeatable": false,
+  "lines": [
+    {
+      "speaker_id": "player",
+      "text": "一個被水沖上岸的木箱。"
+    },
+    {
+      "speaker_id": "player",
+      "text": "裡面有一條還算新鮮的魚。"
+    }
+  ],
+  "choices": [
+    {
+      "id": "take",
+      "text": "拿走湖魚",
+      "effects": [
+        {
+          "type": "give_item",
+          "item_id": "item_fish_001",
+          "qty": 1
+        },
+        {
+          "type": "set_flag",
+          "flag": "flag_took_fish",
+          "value": true
+        }
+      ]
+    }
+  ]
+}

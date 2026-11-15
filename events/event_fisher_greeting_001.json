@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "event_fisher_greeting_001",
+  "kind": "dialogue",
+  "trigger": {
+    "map_id": "map_lakeside",
+    "entity_id": "npc_lake_fisher_001"
+  },
+  "repeatable": true,
+  "lines": [
+    {
+      "speaker_id": "npc_lake_fisher_001",
+      "text": "今天魚兒不太上鉤。"
+    },
+    {
+      "speaker_id": "npc_lake_fisher_001",
+      "text": "水深的地方少去。"
+    }
+  ],
+  "choices": [
+    {
+      "id": "fish",
+      "text": "問釣魚技巧",
+      "effects": [
+        {
+          "type": "set_flag",
+          "flag": "flag_asked_fisher",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "bye",
+      "text": "打擾了",
+      "effects": [
+        {
+          "type": "set_flag",
+          "flag": "flag_met_fisher",
+          "value": true
+        }
+      ]
+    }
+  ]
+}

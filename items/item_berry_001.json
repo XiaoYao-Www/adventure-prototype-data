@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "id": "item_berry_001",
+  "name": "野莓",
+  "category": "consumable",
+  "description": "酸甜的野莓，可以補充體力。",
+  "stack_limit": 99
+}

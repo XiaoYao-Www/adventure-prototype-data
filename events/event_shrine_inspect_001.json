@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "event_shrine_inspect_001",
+  "kind": "dialogue",
+  "trigger": {
+    "map_id": "map_forest_depths",
+    "entity_id": "object_depths_shrine_001"
+  },
+  "repeatable": true,
+  "lines": [
+    {
+      "speaker_id": "player",
+      "text": "古老的神社，木頭已經發黑。"
+    },
+    {
+      "speaker_id": "player",
+      "text": "供台上刻著一行字：記得回來的路。"
+    }
+  ],
+  "choices": [
+    {
+      "id": "pray",
+      "text": "合掌祈禱",
+      "effects": [
+        {
+          "type": "set_flag",
+          "flag": "flag_prayed_shrine",
+          "value": true
+        }
+      ]
+    }
+  ]
+}

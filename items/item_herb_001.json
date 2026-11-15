@@ -3,6 +3,6 @@
   "id": "item_herb_001",
   "name": "藥草",
   "category": "consumable",
-  "description": "路邊常見的藥草。用途與效果暫定，尚未實作。",
+  "description": "森林邊緣常見的藥草。",
   "stack_limit": 99
 }

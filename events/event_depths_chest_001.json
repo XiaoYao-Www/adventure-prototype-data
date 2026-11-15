@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "event_depths_chest_001",
+  "kind": "dialogue",
+  "trigger": {
+    "map_id": "map_forest_depths",
+    "entity_id": "chest_depths_stone_001"
+  },
+  "repeatable": false,
+  "lines": [
+    {
+      "speaker_id": "player",
+      "text": "一只被苔蘚覆蓋的箱子。"
+    },
+    {
+      "speaker_id": "player",
+      "text": "裡面是幾塊堅硬的石頭。"
+    }
+  ],
+  "choices": [
+    {
+      "id": "take",
+      "text": "拿走石塊",
+      "effects": [
+        {
+          "type": "give_item",
+          "item_id": "item_stone_001",
+          "qty": 1
+        },
+        {
+          "type": "set_flag",
+          "flag": "flag_took_stone",
+          "value": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "event_sign_village_001",
+  "kind": "dialogue",
+  "trigger": {
+    "map_id": "map_start_village",
+    "entity_id": "object_village_sign_001"
+  },
+  "repeatable": true,
+  "lines": [
+    {
+      "speaker_id": "player",
+      "text": "木牌上寫著：往東是森林，往北是廣場。"
+    }
+  ],
+  "choices": [
+    {
+      "id": "read",
+      "text": "記下來",
+      "effects": [
+        {
+          "type": "set_flag",
+          "flag": "flag_read_village_sign",
+          "value": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "id": "item_stone_001",
+  "name": "石塊",
+  "category": "material",
+  "description": "堅硬的石塊，可用於修補。",
+  "stack_limit": 99
+}

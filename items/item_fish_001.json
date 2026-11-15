@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "id": "item_fish_001",
+  "name": "湖魚",
+  "category": "consumable",
+  "description": "湖畔捕到的魚。",
+  "stack_limit": 99
+}

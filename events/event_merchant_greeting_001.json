@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "event_merchant_greeting_001",
+  "kind": "dialogue",
+  "trigger": {
+    "map_id": "map_start_village",
+    "entity_id": "npc_village_merchant_001"
+  },
+  "repeatable": true,
+  "lines": [
+    {
+      "speaker_id": "npc_village_merchant_001",
+      "text": "客官，看看貨嗎？"
+    },
+    {
+      "speaker_id": "npc_village_merchant_001",
+      "text": "藥草和野莓都很新鮮。"
+    }
+  ],
+  "choices": [
+    {
+      "id": "buy",
+      "text": "拿一些野莓（免費試吃）",
+      "effects": [
+        {
+          "type": "give_item",
+          "item_id": "item_berry_001",
+          "qty": 1
+        },
+        {
+          "type": "set_flag",
+          "flag": "flag_met_merchant",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "later",
+      "text": "下次再說",
+      "effects": [
+        {
+          "type": "set_flag",
+          "flag": "flag_declined_merchant",
+          "value": true
+        }
+      ]
+    }
+  ]
+}

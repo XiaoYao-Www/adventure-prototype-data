@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "event_lake_sign_001",
+  "kind": "dialogue",
+  "trigger": {
+    "map_id": "map_lakeside",
+    "entity_id": "object_lake_sign_001"
+  },
+  "repeatable": true,
+  "lines": [
+    {
+      "speaker_id": "player",
+      "text": "木牌寫著：水深危險，請勿靠近。"
+    },
+    {
+      "speaker_id": "player",
+      "text": "旁邊有人用炭筆補了一句：魚很好吃。"
+    }
+  ],
+  "choices": [
+    {
+      "id": "read",
+      "text": "記下來",
+      "effects": [
+        {
+          "type": "set_flag",
+          "flag": "flag_read_lake_sign",
+          "value": true
+        }
+      ]
+    }
+  ]
+}
